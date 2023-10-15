@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej. 2 - Grid C</title>
+</head>
+<style>
+    .grid-container {
+        display: grid;
+        border: 1px solid black;
+    }
+
+    .grid-item {
+        border: 1px solid black;
+    }
+
+    .header {
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .recreo {
+        text-align: center;        
+    }
+
+    .dwes {
+        background-color: darkviolet;
+    }
+
+    .dwec {
+        background-color: lightgreen;
+    }
+
+    .eie {
+        background-color: salmon;
+    }
+
+    .daw {
+        background-color: royalblue;
+    }
+
+    .ing {
+        background-color: orange;
+    }
+
+    .diw {
+        background-color: yellow;
+    }
+
+</style>
+<body>
+    <h2>Ejercicio 2, Grid C - Mario Valiño Canalejas - 1º DAW B</h2>
+    <br>
+    <div class="grid-container" style="width: 350px; height: 200px;">
+        <div class="grid-item header" style="grid-column: 1; grid-row: 1;">Horas</div>
+        <div class="grid-item header" style="grid-column: 2; grid-row: 1;">Lunes</div>
+        <div class="grid-item header" style="grid-column: 3; grid-row: 1;">Martes</div>
+        <div class="grid-item header" style="grid-column: 4; grid-row: 1;">Miércoles</div>
+        <div class="grid-item header" style="grid-column: 5; grid-row: 1;">Jueves</div>
+        <div class="grid-item header" style="grid-column: 6; grid-row: 1;">Viernes</div>
+        <!---->
+        <div class="grid-item horas" style="grid-column: 1; grid-row: 2;">1</div>
+        <div class="grid-item dwes" style="grid-column: 2; grid-row: 2 / span 3;">DWES</div>
+        <div class="grid-item dwes" style="grid-column: 3; grid-row: 2 / span 3;">DWES</div>
+        <div class="grid-item dwes" style="grid-column: 4; grid-row: 2 / span 3;">DWES</div>
+        <div class="grid-item dwec" style="grid-column: 5; grid-row: 2 / span 2;">DWEC</div>
+        <div class="grid-item eie" style="grid-column: 6; grid-row: 2 / span 2;">EIE</div>
+        <!---->
+        <div class="grid-item horas" style="grid-column: 1; grid-row: 3;">2</div>
+        <!---->
+        <div class="grid-item horas" style="grid-column: 1; grid-row: 4;">3</div>
+        <div class="grid-item daw" style="grid-column: 5; grid-row: 4;">DAW</div>
+        <div class="grid-item ing" style="grid-column: 6; grid-row: 4;">ING</div>
+        <!---->
+        <div class="grid-item horas" style="grid-column: 1; grid-row: 5;">-</div>
+        <div class="grid-item recreo" style="grid-column: 2 / span 5; grid-row: 5;">RECREO</div>
+        <!---->
+        <div class="grid-item horas" style="grid-column: 1; grid-row: 6;">4</div>
+        <div class="grid-item eie" style="grid-column: 2; grid-row: 6;">EIE</div>
+        <div class="grid-item diw" style="grid-column: 3; grid-row: 6 / span 3;">DIW</div>
+        <div class="grid-item diw" style="grid-column: 4; grid-row: 6;">DIW</div>
+        <div class="grid-item daw" style="grid-column: 5; grid-row: 6;">DAW</div>
+        <div class="grid-item ing" style="grid-column: 6; grid-row: 6;">ING</div>
+        <!---->
+        <div class="grid-item horas" style="grid-column: 1; grid-row: 7;">5</div>
+        <div class="grid-item daw" style="grid-column: 2; grid-row: 7 / span 2;">DAW</div>
+        <div class="grid-item dwec" style="grid-column: 4; grid-row: 7 / span 2;">DWEC</div>
+        <div class="grid-item diw" style="grid-column: 5; grid-row: 7 / span 2;">DIW</div>
+        <div class="grid-item dwec" style="grid-column: 6; grid-row: 7 / span 2;">DWEC</div>
+        <!---->
+        <div class="grid-item horas" style="grid-column: 1; grid-row: 8;">6</div>
+    </div>
+</body>
+</html>
