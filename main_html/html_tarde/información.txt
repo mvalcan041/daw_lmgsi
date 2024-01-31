@@ -1,8 +1,0 @@
-
-¡Hola Gloria!
-
-Hay muchos ejercicios en los que no estoy seguro si está bien estructurado todo.
-
-Suelo usar muchos 'br' como es normal ya que me pide esa separación el ejercicio, pero no sé si debo usarlos en la misma línea o hacer un salto.
-Por eso no sé si la propia estructura del ejercicio, la forma en la que se ve el código es la adecuada o no.
-No usé ningún 'div' tampoco, ya que al no exigirmelo no he tenido porque usarlos.
