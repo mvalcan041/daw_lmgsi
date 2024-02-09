@@ -23,19 +23,21 @@
                 </ul>
             </nav>
         </div>
-        <div class="content_1"> 
-            <button class="my-button"></button>
+        <div class="content_1">
+            <video class="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+                <source src="/pj_ajihle/sample3.mp4" type="video/mp4">
+            </video>
+            <button class="boton_c1"></button>
         </div>
         <div class="content_2">
             <div class="login">
-                <div class="login_title">
+                <div class="title_login">
                     <p>¡Bienvenido de nuevo!</p>
                 </div>
-                <form action="" class="login_form">
+                <form action="" class="form_login"> <!-- No deja poner method="post". -->
                     <input type="text" name="usuario" placeholder="Correo Electrónico" required>
-                    <input type="password" placeholder="Contraseña" name="password" required>
-                    <button type="submit" title="Ingresar" name="Ingresar">Login</button>
-                    <input type="checkbox">
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <button type="submit" class="boton_login">Iniciar sesión</button>
                 </form>
                 <div class="login_footer">
                     <a href="#">¿Has olvidado tu contraseña?</a>
@@ -43,7 +45,9 @@
                 </div>
             </div>
         </div>
-        <div class="footer"> </div>
+        <div class="footer">
+            <p>Página creada por Mario.</p>
+        </div>
     </div>
 </body>
 </html>

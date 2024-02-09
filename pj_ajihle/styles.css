@@ -8,15 +8,24 @@
     /* font-family: "Noto IKEA Latin Regular"; */
 }
 
+/* body {
+    margin-left: 100px;
+    margin-right: 50px;
+} Posible resize de la página. */ 
+
 /* Cambiar de font. Mediante @import. */
 
 .parent {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: 1fr repeat(3, 2fr) 0.75fr;
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
+    grid-template-rows: 1fr repeat(3, 2fr) 0.5fr;
+    grid-column-gap: 22.5px;
+    grid-row-gap: 27.5px;
     margin: 25px;
+
+    /* Añadido nuevo: */
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .logo { 
@@ -34,7 +43,7 @@
     display: grid;
     align-items: center;
     padding-left: 0px;
-    border: 1px solid;
+    border: none;
 }
 
 /* Acertar con la ubicación, tamaño (bold?) y añadir efecto que cuando al pulsar aparezca sobreimpresionado en bold. */
@@ -55,36 +64,55 @@
     text-decoration: none;
 }
 
+.menu ul li a:hover {
+    font-weight: bold;
+}
+
 .content_1 { 
+    position: relative;
     grid-area: 2 / 1 / 5 / 8;
     border-radius: 25px;
     background-color: #506956;
+    /* box-shadow: 0px 0px 5px 5px #00000015; */
 }
 
-.my-button {
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.boton_c1 {
     /* position: absolute;
     bottom: 0;
     right: 0; */
+    position: relative;
+    z-index: 1;
     display: block;
     width: 50px;
     height: 50px;
-    margin-top: 43%;
-    margin-left: 93%;
+    margin-top: 45%;
+    margin-left: 93.5%;
     padding: 10px 20px;
     background-color: #FFF;
     color: #CA9864;
     border: none;
     border-radius: 50%;
     cursor: pointer;
+    box-shadow: 0px 0px 5px 5px #00000015;
     /* Añadir más grosor a la fuente, si se usa letras al final. */
 }
 
-.my-button:hover {
+.boton_c1:hover {
     background-color: lightgray;
     color: #000;
 }
                                                     /* Modificar :hover y :active. */
-.my-button:active {
+.boton_c1:active {
     background-color: lightgray;
 }
 
@@ -93,7 +121,70 @@
 .content_2 { 
     grid-area: 2 / 8 / 5 / 11;
     border-radius: 25px;
+    background-color: #81613E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 0px 0px 5px 5px #00000015; */
+}
+
+.login {
+    padding: 50px 30px;
     background-color: #CA9864;
+    border-radius: 25px;
+}
+
+.title_login {
+    font-size: 200%;
+    color: #81613E;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login input {
+    font-size: 110%;
+    display: block;
+    color: #81613E;
+    width: 100%;
+    height: 35px;
+    padding: 0px 5px 0px 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 3px;
+}
+
+.login input::placeholder {
+    color: lightgrey;
+}
+
+.boton_login {
+    font-size: 110%;
+    color:#81613E;
+    background-color: #E6C6A4;
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+.boton_login:hover {
+    color: #E6C6A4;
+    background-color: #81613E;
+}
+
+.login_footer {
+    font-size: 90%;
+    text-align: center;    
+    margin-top: 15px;
+}
+
+.login_footer a {
+    display: inline-block;
+    text-decoration: none;
+    color: #81613E;
+    margin-bottom: 3px;
 }
 
 /* Valorar un 'Inicio de sesion en el .content_2 */
@@ -103,6 +194,7 @@
     grid-area: 5 / 1 / 6 / 11;
     border-radius: 25px;
     background-color: lightgrey;
+    /* box-shadow: 0px 0px 5px 5px #00000015; */
 }
 
 /* Posible "uso de cookies" */
