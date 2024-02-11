@@ -64,7 +64,7 @@ input {
 .menu ul li {
     float: left;
     font-size: 20px;
-    
+    /* Subir más la fuente? */
 }
 
 .menu ul li a {
@@ -279,7 +279,6 @@ input {
     margin-bottom: 3px;
 }
 
-/* Valorar un 'Inicio de sesion en el .content_2 */
 /* Valorar la integración de la API de Facebook de la página de la Ajihle. */
 
 .footer { 
