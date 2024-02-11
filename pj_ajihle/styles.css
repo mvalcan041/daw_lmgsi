@@ -9,12 +9,15 @@
 }
 
 body {
-    background-image: url();
+    background-image: url(/pj_ajihle/bocetofinal.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+input {
+    all: unset
+}
 
 /* body {
     margin-left: 100px;
@@ -61,6 +64,7 @@ body {
 .menu ul li {
     float: left;
     font-size: 20px;
+    
 }
 
 .menu ul li a {
@@ -95,16 +99,48 @@ body {
     position: absolute;
     top: 0;
     right: -50%;
-    width: 20%;
+    width: 25%;
     height: 100%;
     background-color: #FFF;
-    animation: slideIn 5s forwards;
-    border-radius: 0px 20px 20px 0px;
+    animation: fadeIn 5s forwards;
+    border-radius: 0px 24.5px 24.5px 0px;
 }
 
-@keyframes slideIn {
+.texto_overlay {
+    position: absolute;
+    top: 76%;
+    left: 78.2%;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeInText 4s forwards;
+    animation-delay: 4s;
+}
+
+@keyframes fadeInText {
     from {
-        right: -50%;
+        opacity: 0; /* Empieza con opacidad 0 */
+    }
+    to {
+        opacity: 1; /* Termina con opacidad 1 */
+    }
+}
+
+.texto_overlay h1 {
+    color: #FFF;
+    font-size: 25px;
+    white-space: nowrap;
+    text-align: justify;
+}
+
+.texto_overlay h2 {
+    color: #FFF;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        right: 0;
         opacity: 0;
     }
     to {
@@ -125,14 +161,22 @@ body {
     margin-left: 93.5%;
     padding: 10px 20px;
     background-color: #FFF;
-    color: #CA9864;
+    color: #506956;
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0px 0px 5px 5px #00000015;
+    /* box-shadow: 0px 0px 5px 5px #00000015; */
     opacity: 0;
     animation: fadeInButton 2s ease-in-out 7s forwards;
+    z-index: 2;
     /* Añadir más grosor a la fuente, si se usa letras al final. */
+}
+
+.boton_c1 p {
+    font-size: 30px;
+    position: absolute;
+    top: 4.75px;
+    left: 12.5px;
 }
 
 .boton_c1:hover {
@@ -183,17 +227,24 @@ body {
     font-size: 110%;
     display: block;
     color: #81613E;
+    background-color: #FFF;
     width: 100%;
     height: 35px;
     padding: 0px 5px 0px 5px;
     margin-bottom: 10px;
     box-sizing: border-box;
-    border: none;
     border-radius: 3px;
+    transition: 250ms;
 }
 
 .login input::placeholder {
     color: lightgrey;
+}
+
+.login input:focus{
+    border: 2px solid #A57B4F;
+    border-radius: 3px;
+    transition: 0ms;
 }
 
 .boton_login {
@@ -205,6 +256,7 @@ body {
     margin-top: 10px;
     border: none;
     border-radius: 3px;
+    transition: 200ms; 
 }
 
 .boton_login:hover {
@@ -213,6 +265,8 @@ body {
 }
 
 .login_footer {
+    display: flex;
+    gap: 15px;
     font-size: 90%;
     text-align: center;    
     margin-top: 15px;
@@ -231,7 +285,8 @@ body {
 .footer { 
     grid-area: 5 / 1 / 6 / 11;
     border-radius: 25px;
-    background-color: lightgrey;
+    /* background-color: #d3d3d3b9; */
+    background-color: #d3d3d300;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -247,6 +302,11 @@ body {
 .logos_rrss img {
     width: 25px;
     margin: 0 20px;
+    transition: 200ms;
+}
+
+.logos_rrss img:hover {
+    transform: scale(1.2);
 }
 
 .footer > p {
