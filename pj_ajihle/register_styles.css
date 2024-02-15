@@ -6,13 +6,17 @@
 }
 
 body {
-    background-image: url(bocetofinal.png); 
+    background-image: url(bocetofinal.png);
     /* Nuevo fondo para esta página. */
 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    /* Ver cómo poner el fondo con blur y que ese blur ocupe toda la pantalla. Es decir, posible reestructura de body y img. */
 }
+
+
 
 .parent {
     display: grid;
