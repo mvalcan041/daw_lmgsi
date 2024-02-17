@@ -4,50 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  type="text/css" href="register_styles.css">
-    <title>¡Únete a la Ajihle!</title>
+    <link rel="stylesheet"  type="text/css" href="css/register_styles.css">
+    <title>¡Únete a la AJIHLE!</title>
 </head>
 <body>
     <div class="parent">
         <div class="header"> 
             <a href="home.html">
-                <img src="ajihle_sin_fondo.png" alt="Ajihle">
+                <img src="images/ajihle_logo.png" alt="Ajihle">
             </a>
         </div>
         <div class="content_1"> 
             <div class="register">
                 <div class="register_title">
                     <h1>¡Únete a nosotros!</h1>
-                    <p>Crea tu cuenta, participa con nosotros y estate al día de todas las novedades de la Ajihle.</p>
+                    <p>Crea tu cuenta, participa con nosotros y mantente</p>
+                    <p>al día de todas las novedades de la <span>AJIHLE.</span></p>
                 </div>
-                <form action="#" class="form_register">
-                    <label for="nombre_completo">Nombre completo: </label>
-                    <input type="text" name="nombre_completo" placeholder="Manuel Bouza García" required>
-                    <label for="usuario"><b>Correo electrónico: </b></label>
+                <form action="#"> <!-- Posible class="form_register" que no usé. 'action='#'' porque no mando el formulario a ningún lado. -->
+                    <input type="text" name="nombre_completo" placeholder="Nombre de usuario" required>
                     <input type="text" name="usuario" placeholder="Correo Electrónico" required>
-                    <label for="password"><b>Contraseña: </b></label>
                     <input type="password" name="password" placeholder="Contraseña" required>
-                    <label for="password_repeat"><b>Repite tu contraseña: </b></label>
-                    <input type="password" name="password_repeat" placeholder="Contraseña" required>
+                    <input type="password" name="password_repeat" placeholder="Repetir contraseña" required>
+                    <button>¡Regístrate!</button>
                 </form>
             </div>
         </div>
         <div class="footer"> 
-            <div class="rrss">
+            <div class="rrss"> <!-- Enlaces con rutas reales y uso de imágenes/iconos. -->
                 <a href="https://twitter.com/AJIHLE1">
-                    <img src="x.png" alt="X">
+                    <img src="images/x.png" alt="X">
                 </a>
                 <a href="https://www.facebook.com/people/Ajihle-Historiograf%C3%ADa-e-Historia-de-la-Lengua-Espa%C3%B1ola/100064833992665/">
-                    <img src="facebook.png" alt="Facebook">
+                    <img src="images/facebook.png" alt="Facebook">
                 </a>
                 <a href="https://www.instagram.com/ajihle1/">
-                    <img src="instagram.png" alt="Instagram">
+                    <img src="images/instagram.png" alt="Instagram">
                 </a>
-                <a href="https://ajihle.net/">
-                    <img src="wordpress.png" alt="Wordpress">
+                <a href="https://ajihle.net/"> <!-- Enlace con la ruta de la página original de la que pensé hacer el rework de la web. -->
+                    <img src="images/wordpress.png" alt="Wordpress">
                 </a>
-                <a href="mailto:infoajihle@gmail.com">
-                    <img src="email.png" alt="Correo Electrónico">
+                <a href="mailto:infoajihle@gmail.com"> <!-- Enlace con ruta a correo electrónico. -->
+                    <img src="images/email.png" alt="Correo Electrónico">
                 </a>
             </div>
             <p>© 2024 Mario Valiño Canalejas.</p>
