@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Edificios - Página Principal</title>
+</head>
+<body>
+    <h2>Página Principal</h2>
+    <button onclick="mostrarFormularioEdificio()">Crear Nuevo Edificio</button>
+    <button onclick="mostrarEdificios()">Ver Edificios</button>
+
+    <script>
+        // Función para mostrar el formulario para crear un nuevo edificio
+        function mostrarFormularioEdificio() {
+            window.location.href = 'formulario.html';
+        }
+
+        // Función para mostrar la página con la lista de edificios creados
+        function mostrarEdificios() {
+            window.location.href = 'edificios.html';
+        }
+    </script>
+</body>
+</html>

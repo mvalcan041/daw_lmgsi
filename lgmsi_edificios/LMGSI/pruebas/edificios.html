@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edificios</title>
+    <style>
+        /* Estilos CSS */
+        /* Puedes personalizar los estilos según tus preferencias */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Edificios Creados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Calle</th>
+                    <th>Número</th>
+                    <th>Código Postal</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-edificios">
+                <!-- Aquí se mostrarán los edificios creados -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        window.onload = function() {
+            // Recuperar los datos del edificio del almacenamiento local
+            const edificioCreado = JSON.parse(localStorage.getItem('edificioCreado'));
+            if (edificioCreado) {
+                // Mostrar la información del edificio en la tabla
+                const tablaEdificios = document.getElementById('tabla-edificios');
+                const fila = document.createElement('tr');
+                fila.innerHTML = `
+                    <td>${edificioCreado.calle}</td>
+                    <td>${edificioCreado.numero}</td>
+                    <td>${edificioCreado.codigoPostal}</td>
+                `;
+                tablaEdificios.appendChild(fila);
+            }
+        };
+    </script>
+</body>
+</html>

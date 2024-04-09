@@ -1,0 +1,32 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+}
+
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.block1 {
+    background-color: #ff9999; /* Color rojo */
+}
+
+.block2 {
+    background-color: #99ccff; /* Color azul */
+}
+
+.block3-4 {
+    background-color: #99ff99; /* Color verde */
+    grid-column: span 2; /* Ocupa dos columnas */
+}
