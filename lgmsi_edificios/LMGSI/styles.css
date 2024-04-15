@@ -2,6 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 .container {
@@ -9,6 +10,7 @@ body, html {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     height: 100%;
+    margin: 0 auto;
 }
 
 .block {
@@ -16,17 +18,79 @@ body, html {
     justify-content: center;
     align-items: center;
     font-size: 24px;
+    border: thin solid; /* Separación mientras declaración de bloques. */
 }
 
 .block1 {
-    background-color: #ff9999; /* Color rojo */
+    background-color: #FFFF;
+    height: 600px;
 }
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 22px;
+}
+
+input {
+    width: 100%;
+    /* padding: 10px; */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: thin solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+/* Cambios en los input de tipo numérico para todos los navegadores. */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #45A049;
+}
+
 
 .block2 {
-    background-color: #99ccff; /* Color azul */
+    background-color: #FFFF;
+    height: 600px;
 }
 
-.block3-4 {
-    background-color: #99ff99; /* Color verde */
-    grid-column: span 2; /* Ocupa dos columnas */
+
+.block3 {
+    background-color: #FFFF;
+    grid-column: span 2;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    border: solid thin;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    /* border-bottom: 1px solid #ddd; */
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
 }
