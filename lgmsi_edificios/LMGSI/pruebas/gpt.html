@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Edificios LMSGI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="block block1">
+            <form id="formulario-edificio">
+                <h3>Creación de Edificios</h3>
+                <label for="calle">Calle: </label>
+                <input type="text" id="calle" name="calle" required>
+                <br>
+                <label for="numero">Número: </label>
+                <input type="number" id="numero" name="numero" required>
+                <br>
+                <label for="codigoPostal">Código Postal: </label>
+                <input type="number" id="codigoPostal" name="codigoPostal" required>
+                <br>
+                <label for="numPlantas">Número de Plantas: </label>
+                <input type="number" id="numPlantas" name="numPlantas" min="0" max="10" required>
+                <br>
+                <button type="submit" id="crearEdificio">Crear Edificio</button>
+            </form>
+        </div>
+        <div class="block block2">
+            <form id="formulario-propietario" disabled>
+                <h3>Asignar Propietario</h3>
+                <label for="nombrePropietario">Nombre del Propietario:</label>
+                <input type="text" id="nombrePropietario" name="nombrePropietario" required>
+                <br>
+                <label for="planta">Planta:</label>
+                <input type="number" id="planta" name="planta" required>
+                <br>
+                <label for="puerta">Puerta:</label>
+                <input type="text" id="puerta" name="puerta" required>
+                <br>
+                <button type="submit" id="agregarPropietario">Agregar Propietario</button>
+            </form>
+        </div>
+        <div class="block block3">
+            <h3>Cons. Personalizadas</h3>
+            <br>
+            <table class="botones_consultas">
+                <thead>
+                    <tr>
+                        <td><button type="button" id="infoEdificios">Información Edificios</button></td>
+                        <td><button type="button">Información Pisos</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button">Con. Personalizada 1</button></td>
+                        <td><button type="button">Con. Personalizada 2</button></td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="block block4">
+            <h3>Edificios Creados</h3>
+            <br>
+            <table class="tabla_edificios">
+                <thead>
+                    <tr>
+                        <th>Calle</th>
+                        <th>Número</th>
+                        <th>Cód. Postal</th>
+                        <th>Núm. Plantas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se mostrarán los edificios creados. -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Verificar que los campos del formulario de creación de edificios estén completos antes de permitir crear un edificio
+        document.getElementById('formulario-edificio').addEventListener('submit', function(event) {
+            var calle = document.getElementById('calle').value;
+            var numero = document.getElementById('numero').value;
+            var codigoPostal = document.getElementById('codigoPostal').value;
+            var numPlantas = document.getElementById('numPlantas').value;
+
+            if (!calle || !numero || !codigoPostal || !numPlantas) {
+                alert('Por favor complete todos los campos antes de crear un edificio.');
+                event.preventDefault();
+            }
+        });
+
+        // Habilitar o deshabilitar campos del formulario de asignación de propietarios según existan edificios creados
+        document.getElementById('infoEdificios').addEventListener('click', function() {
+            var edificiosCreados = document.querySelectorAll('.tabla_edificios tbody tr').length;
+            var formularioPropietario = document.getElementById('formulario-propietario');
+            if (edificiosCreados === 0) {
+                alert('Error, no hay ningún edificio creado.');
+                return;
+            }
+            formularioPropietario.disabled = false;
+        });
+    </script>
+</body>
+</html>
